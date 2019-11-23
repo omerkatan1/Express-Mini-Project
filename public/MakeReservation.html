@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body>
@@ -37,11 +39,43 @@
 
                         <div id="box-content">
 
-                            <h3 id="content-text">We only have <span id="tablesLeft"></span> tables! Book your seat before they all are gone!</h3>
+                            <h3 id="content-text">Make Your Reservation</h3>
 
 
 
                         </div>
+
+                    </div>
+
+                    <div id="reservation-box" class="col-12">
+
+                        <div id="reservation-header">
+
+                            <h6 class="subHeader">Table Reservation</h6>
+
+                        </div>
+
+                        <div id="reservation-content">
+
+                            <form action="">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="reserve_name">
+
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control" id="reserve_phone-number">
+
+                                <label>Email</label>
+                                <input type="text" class="form-control" id="reserve_email">
+
+                                <label>Unique ID</label>
+                                <input type="text" class="form-control" id="reserve_ID">
+
+                                <button type="submit" id="form_submit">Submit</button>
+                            </form>
+
+                        </div>
+
+
 
                     </div>
 
@@ -58,6 +92,33 @@
 
     </div>
 
+
+    <script type="text/javascript">
+    
+        $('#form_submit').click((event) => {
+            event.preventDefault();
+
+            // get data from form
+            const data = {
+                'name': $('#reserve_name').val().trim(),
+                'phone_number': $('#reserve_phone-number').val().trim(),
+                'email': $('#reserve_email').val().trim(),
+                'ID': $('#reserve_ID').val().trim()
+            }
+
+            // POST AJAX data to /api/reservations
+
+            $.post("/api/reservations", data);
+
+            $.ajax({
+                url: '/api/reservations',
+                method: 'GET'
+            }).then(function(response) {
+                console.log(response);
+            });
+        });
+    
+    </script>
 </body>
 
 </html>
