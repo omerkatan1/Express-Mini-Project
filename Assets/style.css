@@ -1,0 +1,26 @@
+header {
+    padding: 20px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+#body-box {
+    padding: 40px;
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+header h1 {
+    font-size: 45px;
+}
+
+#box-content {
+    padding: 20px;
+
+}
+
+#veiwTables,
+#makeReservation {
+    margin-top: 30px;
+}

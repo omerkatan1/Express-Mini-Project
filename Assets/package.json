@@ -1,0 +1,23 @@
+{
+  "name": "Express-Mini-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omerkatan1/Express-Mini-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omerkatan1/Express-Mini-Project/issues"
+  },
+  "homepage": "https://github.com/omerkatan1/Express-Mini-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
